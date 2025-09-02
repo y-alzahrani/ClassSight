@@ -152,6 +152,14 @@ classsight/
 - **Aggregate Data Only**: All analytics are based on overall classroom metrics
 - **Behavior Detection**: Focuses on posture and head position, not facial expressions
 
+## Authors
+
+- [Khalid Alshahrani](https://github.com/khalidaldoh)
+- [Maram Alshammary](https://github.com/romey101)
+- Munirah AlOtaibi
+- [Raghad Alshanar](https://github.com/raghadsultansh)
+- [Yazeed Alzahrani](https://github.com/y-alzahrani)
+
 ## Acknowledgments
 
 This project is a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, demonstrating:
