@@ -1,0 +1,37 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+supabase==2.0.0
+python-dotenv==1.0.0
+pydantic==2.5.0
+asyncpg==0.29.0
+python-multipart==0.0.6
+httpx==0.25.2
+
+# RAG System Dependencies
+langchain==0.1.0
+langchain-openai==0.0.5
+langchain-community==0.0.20
+openai==1.102.0
+faiss-cpu==1.7.4
+pandas==2.3.2
+numpy==1.26.4
+
+# New RAG System Dependencies
+psycopg2-binary==2.9.9
+
+# Reports Dependencies
+reportlab==4.0.4
+
+# YOLO/Computer Vision Dependencies
+ultralytics>=8.3.0,<8.5
+torch>=2.2,<2.4
+opencv-python>=4.9.0
+Pillow>=10.0.0
+tqdm>=4.66.0
+
+# Testing Dependencies
+aiohttp>=3.8.0
+
+# Optional ML/Visualization Dependencies (for development/debugging)
+matplotlib>=3.8.0
+tensorboard>=2.14.0
