@@ -1,30 +1,26 @@
-# ClassSight: AI-Powered Classroom Analytics Platform
+# ClassSight: AI-Powered Classroom Monitoring System
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black.svg)](https://nextjs.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com)
 [![YOLO](https://img.shields.io/badge/YOLO-v11-red.svg)](https://github.com/ultralytics/ultralytics)
 
-ClassSight is an AI-powered classroom monitoring system that uses computer vision to track student attention levels and attendance patterns. Developed as a capstone project for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**.
-
 ## Project Overview
 
-ClassSight helps educators and administrators monitor classroom engagement by automatically detecting and analyzing student behavior patterns in real-time. The system provides aggregate analytics about attention levels without identifying individual students.
+ClassSight is an AI-powered classroom monitoring system that enables teachers and administrators to track student engagement and performance. It was developed as a capstone project for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**. Built on a Raspberry Pi 5 equipped with a camera, it uses an on-device YOLO-based computer vision model to detect student attention levels and monitor attendance without storing raw video, preserving privacy.
+
+The system generates half-hourly attention and attendance reports, accessible via a web dashboard. Additionally, a RAG-based AI assistant integrated into the platform allows educators to retrieve individual assessment scores and course-level performance summaries on demand.
+
+By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning — contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
 
 ### Key Capabilities
 
-- **Attention Detection**: Automatically detects focused, distracted, and sleeping students
+- **Attention Detection**: Automatically detects focused and distracted
 - **Attendance Tracking**: Counts students present in the classroom
 - **Real-time Analytics**: Live dashboard with engagement metrics
-- **Historical Analysis**: Track patterns over time (hourly, daily, weekly views)
-- **Automated Reports**: Generate PDF summaries of classroom performance
+- **Historical Analysis**: Tracks patterns over time (hourly, daily, and weekly views)
+- **Automated Reports**: Generates PDF summaries of student attendance and attention levels
 - **AI Insights**: Chat interface for querying classroom data
-
-### Hardware Setup
-
-- **Raspberry Pi 5** (8GB RAM) - Main processing unit
-- **Camera Module 3** - Image capture for classroom monitoring
-- Standard classroom installation with overhead view
 
 ## Technology Stack
 
@@ -53,12 +49,10 @@ Camera Feed → YOLO Detection → FastAPI Backend → PostgreSQL Database
 
 ## How It Works
 
-1. **Image Capture**: Raspberry Pi camera captures classroom images at regular intervals
-2. **Behavior Detection**: YOLO model analyzes images to detect student attention states:
-   - Focused (actively engaged)
-   - Distracted (looking away, off-task)
-   - Sleeping (head down, disengaged)
-   - Absent (empty seats)
+1. **Image Capture**: Raspberry Pi camera captures classroom images at 5-second intervals
+2. **Behavior Detection**: YOLO model analyzes the images to detect student attention states:
+   - Attentive (actively engaged)
+   - Distracted (looking away, using mobile phone)
 3. **Data Analysis**: Backend calculates aggregate metrics and stores in database
 4. **Visualization**: Dashboard displays real-time and historical analytics
 5. **Reporting**: Generate comprehensive reports for educators and administrators
@@ -108,8 +102,8 @@ python -c "from models.yolo_service import YOLOAttentionDetector; print('YOLO re
 
 ## Features
 
-### Real-time Dashboard
-- Live attention and distraction percentages
+### Dashboard
+- Attention/distraction percentages
 - Student count tracking
 - Session-by-session breakdown
 - Multiple view modes (hourly, daily, weekly)
@@ -156,28 +150,29 @@ classsight/
 
 - **No Individual Identification**: System detects behavior patterns but does not identify specific students
 - **Aggregate Data Only**: All analytics are based on overall classroom metrics
-- **Privacy Focused**: No facial recognition or personal data collection
 - **Behavior Detection**: Focuses on posture and head position, not facial expressions
 
-## Academic Context
+## Acknowledgments
 
 This project is a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, demonstrating:
 
 - Computer vision and deep learning implementation
 - Full-stack web development
-- Real-time data processing
+- Near real-time data processing
 - Edge computing with Raspberry Pi
 - Database design and analytics
 - User interface development
 
+Special thanks to our supervisor Mr. Hany Elshafey for his guidance and support. We also thank the **Data Science and Machine Learning** class for supporting our work. 
+
 ## Contributing
 
-This is an academic project developed for educational purposes. For questions or collaboration:
+This project was developed for educational purposes. For questions or collaboration:
 
 - **Institution**: Tuwaiq Academy
 - **Program**: Data Science and Machine Learning Bootcamp
-- **Repository**: [GitHub Repository](https://github.com/raghadsultansh/classsight)
+- **Repository**: [GitHub Repository](https://github.com/y-alzahrani/ClassSight/)
 
 ## License
 
-Developed as part of academic coursework at Tuwaiq Academy.
+Developed as part of coursework at Tuwaiq Academy.
