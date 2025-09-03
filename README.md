@@ -153,7 +153,7 @@ This project is a capstone for the **Tuwaiq Academy Data Science and Machine Lea
 - Interactive and responsive user interface design
 - Integration of AI-powered RAG chatbot
 
-Special thanks to our supervisor **Mr. Hany Elshafey** for his guidance. We also thank the **Data Science and Machine Learning** class for supporting our work. 
+Special thanks to our supervisor **Mr. Hany Elshafey** for his guidance and support. We also thank **Tuwaiq Acedemy** and the **Data Science and Machine Learning** class for supporting our work. 
 
 ## Contributing
 
