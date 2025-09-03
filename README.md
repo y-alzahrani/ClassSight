@@ -156,7 +156,7 @@ classsight/
 
 - [Khalid Alshahrani](https://github.com/khalidaldoh)
 - [Maram Alshammary](https://github.com/romey101)
-- Munirah AlOtaibi
+- [Munirah AlOtaibi](https://github.com/MunirahAlOtaibi)
 - [Raghad Alshanar](https://github.com/raghadsultansh)
 - [Yazeed Alzahrani](https://github.com/y-alzahrani)
 
@@ -171,7 +171,7 @@ This project is a capstone for the **Tuwaiq Academy Data Science and Machine Lea
 - Database design and analytics
 - User interface development
 
-Special thanks to our supervisor Mr. Hany Elshafey for his guidance and support. We also thank the **Data Science and Machine Learning** class for supporting our work. 
+Special thanks to our supervisor **Mr. Hany Elshafey** for his guidance. We also thank the **Data Science and Machine Learning** class for supporting our work. 
 
 ## Contributing
 
