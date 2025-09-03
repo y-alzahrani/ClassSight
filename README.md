@@ -13,7 +13,7 @@ The system generates half-hourly attention and attendance reports, accessible vi
 
 By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning, contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
 
-### Key Capabilities
+## Key Capabilities
 
 - **Attention Detection**: Automatically identifies focused and distracted students
 - **Attendance Tracking**: Detects abd counts students present in the classroom
@@ -56,6 +56,23 @@ Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → P
 3. **Data Processing**: The Fast API backend aggregates metrics (e.g. average student count, maximum distraction rate) and stores them in the PostgreSQL database
 4. **Visualization**: The dashboard displays both half-hourly summaries and historical engagement information
 5. **Reporting**: Automatically generates PDF reports for educators and administrators, summarizing attention and attendance patterns
+
+## Project Structure
+
+```
+classsight/
+├── backend/                     # FastAPI backend
+│   ├── main.py                  # API endpoints
+│   ├── models/yolo_service.py   # YOLO detection service
+│   ├── rag_service.py           # AI chatbot logic
+│   ├── services.py              # Analytics and aggregation functions
+│   └── requirements.txt         # Python dependency list
+├── src/                         # Next.js frontend
+│   ├── app/                     # Pages and routing
+│   └── components/              # UI components
+├── update_models.ps1            # Model management script
+└── README.md                    # Project overview and documentation
+```
 
 ## Quick Start
 
@@ -108,23 +125,6 @@ GET /api/attention-distraction   # Returns attention vs distraction metrics
 GET /api/students                # Provides student count analytics
 GET /api/correlation-insights    # Shows correlation between attendance and attention
 POST /api/chat                   # Handles RAG-based chat queries
-```
-
-## Project Structure
-
-```
-classsight/
-├── backend/                     # FastAPI backend
-│   ├── main.py                  # API endpoints
-│   ├── models/yolo_service.py   # YOLO detection service
-│   ├── rag_service.py           # AI chatbot logic
-│   ├── services.py              # Analytics and aggregation functions
-│   └── requirements.txt         # Python dependency list
-├── src/                         # Next.js frontend
-│   ├── app/                     # Pages and routing
-│   └── components/              # UI components
-├── update_models.ps1            # Model management script
-└── README.md                    # Project overview and documentation
 ```
 
 ## Important Limitations
