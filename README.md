@@ -11,51 +11,51 @@ ClassSight is an AI-powered classroom monitoring system that enables teachers an
 
 The system generates half-hourly attention and attendance reports, accessible via a web dashboard. Additionally, a RAG-based AI assistant integrated into the platform allows educators to retrieve individual assessment scores and course-level performance summaries on demand.
 
-By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning — contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
+By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning, contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
 
 ### Key Capabilities
 
-- **Attention Detection**: Automatically detects focused and distracted
-- **Attendance Tracking**: Counts students present in the classroom
-- **Real-time Analytics**: Live dashboard with engagement metrics
-- **Historical Analysis**: Tracks patterns over time (hourly, daily, and weekly views)
-- **Automated Reports**: Generates PDF summaries of student attendance and attention levels
-- **AI Insights**: Chat interface for querying classroom data
+- **Attention Detection**: Automatically identifies focused and distracted students
+- **Attendance Tracking**: Detects abd counts students present in the classroom
+- **Engagement Dashboard**: Automatically updates every 30 minutes with the latest attention and attendance metrics
+- **Historical Analysis**: Visualizes trends over time (hourly, daily, and weekly)
+- **AI Insights**: Enables natural-language queries via a chat interface
+- **Automated Reports**: Generates PDF summaries of attendance and attention
 
 ## Technology Stack
 
 ### Backend
-- **FastAPI** - Python web framework for API services
-- **YOLO v11** - Computer vision model for student behavior detection
-- **PostgreSQL** - Database with Supabase integration
-- **OpenAI Integration** - RAG system for intelligent data queries
+- **FastAPI** – Python web framework for building API services
+- **YOLOv11** – Real-time object detection model for monitoring student behavior
+- **PostgreSQL** – Relational database with Supabase integration for data management
+- **OpenAI Integration** – RAG (Retrieval-Augmented Generation) system for intelligent querying of classroom data
 
 ### Frontend
-- **Next.js 14** - React framework with TypeScript
-- **Tailwind CSS** - Styling and responsive design
-- **Recharts** - Data visualization components
+- **Next.js 14** – React framework with TypeScript for server-side rendering and routing
+- **Tailwind CSS** – CSS framework for responsive UI design
+- **Recharts** – Charting library for rendering interactive visualizations
 
 ### Hardware
-- **Raspberry Pi 5** (8GB RAM) for edge computing
-- **Camera Module 3** for high-quality image capture
+- **Raspberry Pi 5** (8GB RAM) – On-device edge computing platform
+- **Camera Module 3** – high-resolution camera for image capture
 
 ## System Architecture
 
 ```
-Camera Feed → YOLO Detection → FastAPI Backend → PostgreSQL Database
-                                      ↓
-                             Next.js Dashboard ← RAG Chat System
+Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → PostgreSQL (storage)  
+                         ↓
+           Next.js Dashboard (visualizations) ← RAG Chatbot (query interface)
 ```
 
 ## How It Works
 
-1. **Image Capture**: Raspberry Pi camera captures classroom images at 5-second intervals
-2. **Behavior Detection**: YOLO model analyzes the images to detect student attention states:
-   - Attentive (actively engaged)
-   - Distracted (looking away, using mobile phone)
-3. **Data Analysis**: Backend calculates aggregate metrics and stores in database
-4. **Visualization**: Dashboard displays real-time and historical analytics
-5. **Reporting**: Generate comprehensive reports for educators and administrators
+1. **Image Capture**: The Raspberry Pi camera captures classroom images every 5 seconds
+2. **Behavior Detection**: A YOLOv11 model analyzes each image to detect student attention states:
+   - **Attentive** – Actively engaged and focused
+   - **Distracted** – Looking away, using a phone, or showing off-task behavior
+3. **Data Processing**: The Fast API backend aggregates metrics (e.g. average student count, maximum distraction rate) and stores them in the PostgreSQL database
+4. **Visualization**: The dashboard displays both half-hourly summaries and historical engagement information
+5. **Reporting**: Automatically generates PDF reports for educators and administrators, summarizing attention and attendance patterns
 
 ## Quick Start
 
@@ -64,17 +64,17 @@ Camera Feed → YOLO Detection → FastAPI Backend → PostgreSQL Database
 ```bash
 cd classsight/backend
 
-# Create virtual environment
+# Create a virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Check all dependencies
+# Optional: Check environment and dependencies
 python check_dependencies.py
 
-# Start server
+# Run the FastAPI backend server
 uvicorn main:app --reload
 ```
 
@@ -86,71 +86,52 @@ cd classsight
 # Install dependencies
 npm install
 
-# Start development server
+# Start the Next.js development server
 npm run dev
 ```
 
 ### YOLO Model Setup
 
 ```bash
-# Update to latest trained model
+# Pull the latest trained YOLO model
 .\update_models.ps1
 
-# Verify model loading
+# Test if the model loads correctly
 python -c "from models.yolo_service import YOLOAttentionDetector; print('YOLO ready!')"
 ```
-
-## Features
-
-### Dashboard
-- Attention/distraction percentages
-- Student count tracking
-- Session-by-session breakdown
-- Multiple view modes (hourly, daily, weekly)
-
-### Analytics & Reporting
-- Historical trend analysis
-- Peak performance identification
-- Correlation between attendance and attention
-- Automated PDF report generation
-
-### AI Chat Interface
-- Natural language queries about classroom data
-- Intelligent insights and recommendations
-- Historical data analysis
 
 ## API Endpoints
 
 ```
-GET /api/classroom-data          # Raw classroom session data
-GET /api/attention-distraction   # Attention vs distraction metrics
-GET /api/students               # Student count analytics
-GET /api/correlation-insights   # Attendance/attention correlations
-POST /api/chat                  # RAG chat interface
+GET /api/classroom-data          # Returns raw classroom session data
+GET /api/attention-distraction   # Returns attention vs distraction metrics
+GET /api/students                # Provides student count analytics
+GET /api/correlation-insights    # Shows correlation between attendance and attention
+POST /api/chat                   # Handles RAG-based chat queries
 ```
 
 ## Project Structure
 
 ```
 classsight/
-├── backend/                    # FastAPI backend
-│   ├── main.py                # API endpoints
-│   ├── models/yolo_service.py # YOLO detection service
-│   ├── rag_service.py         # AI chat functionality
-│   ├── services.py            # Analytics services
-│   └── requirements.txt       # Python dependencies
-├── src/                       # Next.js frontend
-│   ├── app/                   # Pages and routing
-│   └── components/            # UI components
-├── update_models.ps1          # Model management script
-└── README.md
+├── backend/                     # FastAPI backend
+│   ├── main.py                  # API endpoints
+│   ├── models/yolo_service.py   # YOLO detection service
+│   ├── rag_service.py           # AI chatbot logic
+│   ├── services.py              # Analytics and aggregation functions
+│   └── requirements.txt         # Python dependency list
+├── src/                         # Next.js frontend
+│   ├── app/                     # Pages and routing
+│   └── components/              # UI components
+├── update_models.ps1            # Model management script
+└── README.md                    # Project overview and documentation
 ```
 
 ## Important Limitations
 
-- **No Individual Identification**: System detects behavior patterns but does not identify specific students
-- **Aggregate Data Only**: All analytics are based on overall classroom metrics
-- **Behavior Detection**: Focuses on posture and head position, not facial expressions
+- **No Individual Identification**: The system analyzes student behavior but does not identify or track individual students
+- **Aggregate-Level Insights**: All metrics are reported at the classroom level. No personal or student-specific analytics are provided
+- **Behavior Detection**: Detection is based on head pose and body posture; facial expressions and eye contact are not analyzed
 
 ## Authors
 
@@ -164,12 +145,13 @@ classsight/
 
 This project is a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, demonstrating:
 
-- Computer vision and deep learning implementation
-- Full-stack web development
-- Near real-time data processing
-- Edge computing with Raspberry Pi
-- Database design and analytics
-- User interface development
+- Computer vision and deep learning for behavior recognition
+- Periodic data aggregation and visual reporting based on 5-second frame analysis
+- Edge computing using Raspberry Pi and camera modules
+- Full-stack web development with FastAPI and Next.js
+- Relational database design, analytics, and storage with PostgreSQL
+- Interactive and responsive user interface design
+- Integration of AI-powered RAG chatbot
 
 Special thanks to our supervisor **Mr. Hany Elshafey** for his guidance. We also thank the **Data Science and Machine Learning** class for supporting our work. 
 
@@ -183,4 +165,5 @@ This project was developed for educational purposes. For questions or collaborat
 
 ## License
 
-Developed as part of coursework at Tuwaiq Academy.
+This project was developed as part of coursework at **Tuwaiq Academy**.  
+All rights reserved.
