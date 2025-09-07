@@ -72,18 +72,39 @@ These results confirm the model’s reliability in localizing and distinguishing
 ## Project Structure
 
 ```
-classsight/
-├── backend/                     # FastAPI backend
-│   ├── main.py                  # API endpoints
-│   ├── models/yolo_service.py   # YOLO detection service
-│   ├── rag_service.py           # AI chatbot logic
-│   ├── services.py              # Analytics and aggregation functions
-│   └── requirements.txt         # Python dependency list
-├── src/                         # Next.js frontend
-│   ├── app/                     # Pages and routing
-│   └── components/              # UI components
-├── update_models.ps1            # Model management script
-└── README.md                    # Project overview and documentation
+
+ClassSight/
+│
+├── .gitignore
+├── .gitattributes
+├── README.md
+│
+└── backend/
+    ├── ai_assistant/
+    │   ├── final_rag/
+    │   │   ├── __init__.py
+    │   │   ├── embedder.py
+    │   │   └── retriever.py
+    │   │
+    │   ├── langchain_based_rag/
+    |   |   ├── __init__.py
+    │   │   └── rag_service.py
+    │   │
+    │   └── sql_agent/
+    |       ├── __init__.py
+    │       └── sql_agent.py
+    │
+    ├── yolo_model/
+    │   ├── __init__.py
+    │   ├── data_models.py
+    │   └── yolo_service.py
+    │
+    ├── database.py     
+    ├── models.py
+    ├── check_dependencies.py
+    ├── main.py
+    └── .env.template
+
 ```
 
 ## Quick Start
