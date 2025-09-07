@@ -57,7 +57,7 @@ The YOLO-based model was trained to detect and classify students as either **att
 | Distracted | 83.1%     | 75.2%  | 85.3%   | 54.4%        |
 | **Overall**| 82.4%     | 84.3%  | 89.5%   | 60.3%        |
 
-These results confirm the model’s reliability in localizing and distinguishing between attentive and distracted behaviors, with higher confidence in identifying attentive students.
+These results confirm the model’s reliability in localizing and distinguishing between attentive and distracted behaviors, with particularly strong performance in identifying engaged (attentive) students.
 
 ## How It Works
 
