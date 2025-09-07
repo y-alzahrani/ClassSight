@@ -49,7 +49,7 @@ Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → P
 
 ## Model Performance
 
-The YOLO-based attention detection model was trained to detect and classify students as either **attentive** or **distracted**. On a labeled testing set of 85 images (1,792 total instances), it achieved:
+The YOLO-based model was trained to detect and classify students as either **attentive** or **distracted**. On a labeled testing set of 85 images (1,792 total instances), it achieved:
 
 | Class      | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
 |------------|-----------|--------|---------|--------------|
