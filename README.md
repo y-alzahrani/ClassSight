@@ -47,6 +47,18 @@ Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → P
                                         Next.js Dashboard (visualizations) ← RAG Chatbot (query interface)
 ```
 
+## Model Performance
+
+The YOLO-based attention detection model was trained to identify students as either **attentive** or **distracted**. On a labeled testing set of 85 images (1,792 total instances), it achieved:
+
+| Class      | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
+|------------|-----------|--------|---------|--------------|
+| Attentive  | 81.7%     | 93.4%  | 93.6%   | 66.2%        |
+| Distracted | 83.1%     | 75.2%  | 85.3%   | 54.4%        |
+| **Overall**| 82.4%     | 84.3%  | 89.5%   | 60.3%        |
+
+These results confirm the model’s reliability in localizing and distinguishing between attentive and distracted behaviors, with higher confidence in identifying attentive students.
+
 ## How It Works
 
 1. **Image Capture**: The Raspberry Pi camera captures classroom images every 5 seconds
