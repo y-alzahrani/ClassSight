@@ -1,0 +1,19 @@
+description: Ultralytics YOLO11s model trained on /Users/khalid/DS_Projects/Capstone/Yolo_model_and_data/Student-Attention-Tracker/data.yaml
+author: Ultralytics
+date: '2025-08-25T23:00:43.022254'
+version: 8.3.184
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: Attentive
+  1: Distracted
+args:
+  batch: 1
+  half: false
+channels: 3
