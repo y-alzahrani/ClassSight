@@ -44,7 +44,7 @@ By providing actionable insights, ClassSight empowers educators to proactively i
 ```
 Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → PostgreSQL (storage)  
                                                        ↓
-                                        Next.js Dashboard (visualizations) ← RAG Chatbot (query interface)
+                                        Next.js Dashboard (visualizations) ← RAG Assistant (query interface)
 ```
 
 ## Model Performance
