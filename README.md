@@ -176,15 +176,15 @@ POST /api/chat                   # Handles RAG-based chat queries
 
 ## Acknowledgments
 
-This project is a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, demonstrating:
+This project was developed as a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, demonstrating:
 
-- Computer vision and deep learning for behavior recognition
-- Periodic data aggregation and visual reporting based on 5-second frame analysis
-- Edge computing using Raspberry Pi and camera modules
-- Full-stack web development with FastAPI and Next.js
-- Relational database design, analytics, and storage with PostgreSQL
+- Computer vision and deep learning for student behavior recognition
+- Edge computing with Raspberry Pi and camera modules
+- Scheduled data aggregation and visual reporting
 - Interactive and responsive user interface design
-- Integration of AI-powered RAG chatbot
+- Full-stack web development using FastAPI and Next.js
+- Relational database design, analytics, and storage with PostgreSQL
+- Integration of a RAG assistant
 
 Special thanks to our supervisor **Mr. Hany Elshafey** for his guidance and support. We also thank **Tuwaiq Acedemy** and the **Data Science and Machine Learning** class for supporting our work. 
 
