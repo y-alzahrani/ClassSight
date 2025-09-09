@@ -160,10 +160,9 @@ GET /api/correlation-insights    # Shows correlation between attendance and atte
 POST /api/chat                   # Handles RAG-based chat queries
 ```
 
-## Important Limitations
+## Limitations
 
 - **No Individual Identification**: The system analyzes student behavior but does not identify or track individual students
-- **Aggregate-Level Insights**: All metrics are reported at the classroom level. No personal or student-specific analytics are provided
 - **Behavior Detection**: Detection is based on head pose and body posture; facial expressions and eye contact are not analyzed
 
 ## Authors
