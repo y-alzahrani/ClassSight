@@ -61,7 +61,7 @@ These results confirm the model’s reliability in localizing and distinguishing
 
 ## How It Works
 
-1. **Image Capture**: The Raspberry Pi camera captures classroom images every 5 seconds
+1. **Image Capture**: The Raspberry Pi camera captures classroom images every second
 2. **Behavior Detection**: A YOLOv11 model analyzes each image to detect student attention states:
    - **Attentive** – Actively engaged and focused
    - **Distracted** – Looking away, using a phone, or showing off-task behavior
