@@ -163,7 +163,7 @@ POST /api/chat                   # Handles RAG-based chat queries
 ## Limitations
 
 - **No Individual Identification**: The system analyzes student behavior but does not identify or track individual students
-- **Behavior Detection**: Detection is based on head pose and body posture; facial expressions and eye contact are not analyzed
+- **Behavior Detection**: Detection is based on head pose and body posture; facial expressions and eye gaze direction are not analyzed
 
 ## Authors
 
