@@ -7,9 +7,9 @@
 
 ## Project Overview
 
-ClassSight is an AI-powered classroom monitoring system designed to help teachers and administrators track student engagement and performance. Developed as a capstone project for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, the system runs on a Raspberry Pi 5 equipped with a camera. It leverages an on-device YOLO-based computer vision model to detect student attention levels and presence within the classroom.
+ClassSight is an AI-powered classroom monitoring system developed to help teachers and administrators track student engagement and performance. The system runs on a Raspberry Pi 5 equipped with a camera and leverages an on-device YOLO-based computer vision model to detect student attention levels and presence in the classroom.
 
-The system generates attention and attendance reports every 30 minutes, which are accessible via a web dashboard. Additionally, a RAG-based AI assistant integrated into the platform enables educators to retrieve individual student data and class-level summaries on demand.
+The system generates attention and attendance reports every 30 minutes, which are accessible via a web dashboard. Additionally, the platform integrates a RAG-based AI assistant that enables educators to retrieve individual student data and class-level summaries through natural language queries on demand.
 
 By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning, contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
 
@@ -49,7 +49,7 @@ Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → P
 
 ## Model Performance
 
-The YOLO-based model was trained to detect and classify students as either **attentive** or **distracted**. On a labeled test set of 85 images (1,792 total instances), it achieved the following results:
+The YOLO model was trained on a modest dataset of 412 labeled images to classify students as either attentive or distracted. It achieved the following results:
 
 | Class      | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
 |------------|-----------|--------|---------|--------------|
@@ -57,7 +57,7 @@ The YOLO-based model was trained to detect and classify students as either **att
 | Distracted | 83.1%     | 75.2%  | 85.3%   | 54.4%        |
 | **Overall**| 82.4%     | 84.3%  | 89.5%   | 60.3%        |
 
-These results confirm the model’s reliability in localizing and distinguishing between attentive and distracted behaviors, with particularly strong performance in identifying engaged (attentive) students.
+These results demonstrate the model’s reliability in localizing students and distinguishing between attention states, with particularly strong performance in detecting engaged (attentive) students. With a larger dataset, further improvements in accuracy are expected.
 
 ## How It Works
 
