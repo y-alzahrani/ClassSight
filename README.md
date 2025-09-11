@@ -17,9 +17,9 @@ By providing actionable insights, ClassSight empowers educators to proactively i
 
 - **Attention Detection**: Automatically identifies focused and distracted students
 - **Attendance Tracking**: Detects and counts students present in the classroom
-- **Engagement Dashboard**: Automatically updates every 30 minutes with the latest attention and attendance metrics
+- **Web Dashboard**: Automatically updates every 30 minutes with the latest attention and attendance metrics
 - **Historical Analysis**: Visualizes trends over time (hourly, daily, and weekly)
-- **AI Insights**: Enables natural-language queries via a chat interface
+- **AI Insights**: Enables natural-language queries via an AI chat interface
 - **Automated Reports**: Generates PDF summaries of attendance and attention
 
 ## Technology Stack
