@@ -57,7 +57,7 @@ The YOLO model was trained on a modest dataset of 497 images, collected and labe
 | Distracted | 83.1%     | 75.2%  | 85.3%   | 54.4%        |
 | **Overall**| 82.4%     | 84.3%  | 89.5%   | 60.3%        |
 
-These results demonstrate the model’s reliability in localizing students and distinguishing between attention states, with particularly strong performance in detecting engaged (attentive) students. With a larger dataset, further improvements in accuracy are expected.
+These results demonstrate the model’s reliability in localizing students and distinguishing between attention states, with particularly strong performance in detecting engaged (attentive) students. With a larger and more diverse dataset, further improvements in mAP, recall, and precision are expected, especially for distracted cases.
 
 ## How It Works
 
