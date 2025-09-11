@@ -49,7 +49,7 @@ Camera Feed → YOLOv11 (student detection) → FastAPI (processing & API) → P
 
 ## Model Performance
 
-The YOLO model was trained on a modest dataset of 412 labeled images to classify students as either attentive or distracted. It achieved the following results:
+The YOLO model was trained on a modest dataset of 497 images, collected and labeled by our team, to classify students as either attentive or distracted. It achieved the following results:
 
 | Class      | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
 |------------|-----------|--------|---------|--------------|
