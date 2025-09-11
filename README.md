@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-ClassSight is an AI-powered classroom monitoring system developed to help teachers and administrators track student engagement and performance. The system runs on a Raspberry Pi 5 equipped with a camera and leverages an on-device YOLO-based computer vision model to detect student attention levels and presence in the classroom.
+ClassSight is an AI-powered classroom monitoring system designed to help teachers and administrators track student engagement and performance. The system runs on a Raspberry Pi 5 equipped with a camera and leverages an on-device YOLO-based computer vision model to detect student attention levels and presence in the classroom.
 
 The system generates attention and attendance reports every 30 minutes, which are accessible via a web dashboard. Additionally, the platform integrates a RAG-based AI assistant that enables educators to retrieve individual student grades, attendance data, and class-level summaries through natural language queries.
 
