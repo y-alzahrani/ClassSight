@@ -13,7 +13,7 @@ It generates automated attention and attendance reports, which are accessible vi
 
 By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning, contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
 
-## Key Capabilities
+## Features
 
 - **Attention Detection**: Automatically identifies focused and distracted students
 - **Attendance Tracking**: Detects and counts students present in the classroom
