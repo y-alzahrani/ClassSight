@@ -9,7 +9,7 @@
 
 ClassSight is an AI-powered classroom monitoring system designed to help teachers and administrators track student engagement and performance. The system runs on a Raspberry Pi 5 equipped with a camera and leverages an on-device YOLO-based computer vision model to detect student attention levels and presence in the classroom.
 
-It generates automated attention and attendance reports, which are accessible via a web dashboard. Additionally, the platform integrates a RAG-based AI assistant that enables educators to retrieve student grades, attendance data, and class-level summaries using natural language queries (e.g. how does student performance in Class A compare to Class B over the duration of the course?).
+It generates automated attention and attendance reports, which are accessible via a web dashboard. Additionally, the platform integrates a RAG-based AI assistant that enables educators to retrieve student grades, attendance data, and class-level summaries using natural language queries.
 
 By providing actionable insights, ClassSight empowers educators to proactively improve classroom focus and support student learning, contributing to Saudi Arabia’s Vision 2030 goals for digital transformation in education.
 
