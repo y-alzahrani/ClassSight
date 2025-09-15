@@ -19,7 +19,7 @@ By providing actionable insights, ClassSight empowers educators to proactively i
 - **Attendance Tracking**: Detects and counts students present in the classroom
 - **Web Dashboard**: Automatically updates every 30 minutes with the latest attention and attendance metrics
 - **Historical Analysis**: Visualizes trends over time (hourly, daily, and weekly)
-- **AI Insights**: Enables natural-language queries via an AI chat interface
+- **AI Insights**: Enables natural language queries via an AI chat interface
 - **Automated Reports**: Generates PDF summaries of attendance and attention
 
 ## Technology Stack
@@ -65,9 +65,9 @@ These results demonstrate the model’s reliability in localizing students and d
 2. **Behavior Detection**: A YOLOv11 model analyzes each image to detect student attention states:
    - **Attentive** – Actively engaged and focused
    - **Distracted** – Looking away, using a phone, or showing off-task behavior
-3. **Data Processing**: The Fast API backend aggregates metrics (e.g. average student count, maximum distraction rate) and stores them in the PostgreSQL database
+3. **Data Processing**: The Fast API backend aggregates metrics (e.g. finds average student count, maximum attention rate, etc.) and stores them in the PostgreSQL database
 4. **Visualization**: The dashboard displays both half-hourly summaries and historical engagement information
-5. **Reporting**: Automatically generates PDF reports for educators and administrators, summarizing attention and attendance patterns
+5. **Reporting**: Automatically generates PDF reports for teachers and administrators, summarizing attention and attendance information
 
 ## Project Structure
 
@@ -175,27 +175,21 @@ POST /api/chat                   # Handles RAG-based chat queries
 
 ## Acknowledgments
 
-This project was developed as a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, demonstrating:
+This project was developed as a capstone for the **Tuwaiq Academy Data Science and Machine Learning Bootcamp**, showcasing:
 
-- Computer vision and deep learning for student behavior recognition
-- Edge computing with Raspberry Pi and camera modules
-- Scheduled data aggregation and visual reporting
-- Interactive and responsive user interface design
-- Full-stack web development using FastAPI and Next.js
-- Relational database design, analytics, and storage with PostgreSQL
-- Integration of a RAG assistant
+- Computer vision and deep learning for student attention detection
+- Edge computing using Raspberry Pi and camera modules
+- Retrieval-augmented generation for natural language querying
+- Full-stack web development with FastAPI and Next.js
+- Relational database design and analytics with PostgreSQL
 
 Special thanks to our supervisor **Mr. Hany Elshafey** for his guidance and support. We also thank **Tuwaiq Acedemy** and the **Data Science and Machine Learning** class for supporting our work. 
 
 ## Contributing
 
-This project was developed for educational purposes. For questions or collaboration:
-
-- **Institution**: Tuwaiq Academy
-- **Program**: Data Science and Machine Learning Bootcamp
-- **Repository**: [GitHub Repository](https://github.com/y-alzahrani/ClassSight/)
+We welcome contributions. You can fork the repository and open a pull request.
 
 ## License
 
-This project was developed as part of coursework at **Tuwaiq Academy**.  
+This project was developed for educational purposes at **Tuwaiq Academy**.
 All rights reserved.
